@@ -1,0 +1,3 @@
+begin
+    NuevaPoblacion('EU','EuskalHerria',1);
+end;
