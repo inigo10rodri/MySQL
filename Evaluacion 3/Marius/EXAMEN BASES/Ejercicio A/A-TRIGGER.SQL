@@ -24,5 +24,6 @@ WHERE CLIENTE_NO = cliente_no_nuevo;
 END; //
 
 DELIMITER ;
- drop trigger OtroPedidoSol;
- 
+
+
+
