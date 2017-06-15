@@ -12,7 +12,7 @@ BEGIN
   select departamento_id into depar from departamentos where departamento_nombre=nombre;
   select count(empleado_id),avg(salario) into nEmple,sMedio from empleados where departamento_id=depar ;
   select avg(salario) into sMedio from empleados where departamento_id=depar;
-  select nombre,trabajo_id into empleMN,trabajId from empleados where salario=(select max(salario) from empleados);
+  select nombre,trabajo_id into empleMN,trabajId from empleados where salario in(select max(salario) from empleados);
   select trabajo_nombre into trabajEmple from trabajos where trabajo_id=trabajId;
    
   dbms_output.put_line('El departamento ' || nombre || ' tiene:');
